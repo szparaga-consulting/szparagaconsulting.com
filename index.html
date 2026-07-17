@@ -28,10 +28,9 @@
 
   <div style="background:#1D2B1A;color:#F7F5F0;padding:clamp(56px,6vw,74px) clamp(24px,4vw,52px) clamp(30px,3.5vw,44px);text-align:center;position:relative;">
     <a href="index.html" style="position:absolute;top:clamp(18px,2.2vw,26px);left:clamp(24px,4vw,52px);font-size:17px;letter-spacing:0.04em;color:#F7F5F0;border-bottom:1px solid #CBB88A;padding-bottom:2px;">Home</a>
-    <a href="#top" style="display:inline-flex;flex-direction:column;align-items:center;gap:13px;">
+    <a href="#top" style="display:inline-flex;flex-direction:column;align-items:center;gap:clamp(15px,1.7vw,21px);">
       <img src="ss-emboss.png" alt="Szparaga Consulting monogram" style="height:clamp(80px,8vw,116px);width:auto;display:block;" />
       <span style="font-family:'Newsreader',Georgia,serif;font-size:clamp(28px,3.7vw,44px);letter-spacing:0.36em;font-weight:400;padding-left:0.34em;line-height:1;">SZPARAGA CONSULTING</span>
-      <span style="width:44px;height:1px;background:#CBB88A;margin:2px 0;"></span>
       <span style="font-size:clamp(12px,1.15vw,16px);letter-spacing:0.34em;color:#B9C0B4;padding-left:0.32em;">OPERATIONAL INFRASTRUCTURE FOR HIGH-GROWTH COMPANIES</span>
     </a>
     <nav style="position:absolute;top:clamp(18px,2.2vw,26px);right:clamp(24px,4vw,52px);display:flex;align-items:center;gap:clamp(16px,2.4vw,30px);">
@@ -50,14 +49,14 @@
   </div>
 
   <section id="top" style="padding:clamp(56px,8vw,104px) clamp(24px,4vw,52px) clamp(40px,6vw,72px);max-width:1440px;margin:0 auto;">
-    <div style="display:grid;grid-template-columns:1.15fr 0.85fr;gap:clamp(32px,5vw,72px);align-items:center;">
+    <div style="display:grid;grid-template-columns:1.3fr 0.8fr;gap:clamp(32px,5vw,72px);align-items:center;">
       <div>
         <h1 style="font-family:'Newsreader',Georgia,serif;font-weight:500;font-size:clamp(42px,6.4vw,84px);line-height:1.0;letter-spacing:-0.02em;color:#1D2B1A;margin:0 0 28px;text-wrap:balance;">Infrastructure for the company <span style="font-style:italic;">you're becoming.</span></h1>
         <div style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:40px;">
           <a href="https://calendly.com/smszparaga" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;padding:14px 26px;background:#1D2B1A;color:#F7F5F0;border-radius:999px;font-size:16px;font-weight:500;" style-hover="background:#12100E;">Book a meeting</a>
           <a href="mailto:smszparaga@gmail.com" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;padding:14px 26px;background:transparent;color:#1D2B1A;border:1px solid #1D2B1A;border-radius:999px;font-size:16px;font-weight:500;" style-hover="background:#1D2B1A;color:#F7F5F0;">Email me</a>
         </div>
-        <div style="display:flex;flex-wrap:wrap;gap:8px 26px;padding-top:26px;border-top:1px solid #E4E0D8;font-size:16px;letter-spacing:0.02em;color:#6a695f;">
+        <div style="display:flex;flex-wrap:wrap;gap:8px 26px;padding-top:26px;border-top:1px solid #E4E0D8;font-size:clamp(17px,1.4vw,20px);letter-spacing:0.02em;color:#6a695f;">
           <span>Mt. Pleasant, SC</span>
           <span style="color:#CBB88A;">·</span>
           <span>Fully remote, nationwide</span>
@@ -68,7 +67,8 @@
       <sc-if value="{{ showPortrait }}" hint-placeholder-val="{{ true }}">
         <div style="position:relative;">
           <div style="position:relative;width:100%;aspect-ratio:4/5;background:#DAD7D0;border-radius:6px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(31,47,38,0.5);">
-            <img src="headshot-white.jpg" alt="Sydney Szparaga" style="width:100%;height:100%;object-fit:cover;object-position:50% 22%;display:block;" />
+            <x-import component-from-global-scope="image-slot" from="./image-slot.js" hint-size="100%,100%" id="hero-portrait" shape="rect" fit="cover" placeholder="Drop your headshot">
+            </x-import>
           </div>
           <div style="position:absolute;bottom:-14px;left:-14px;background:#1D2B1A;color:#F7F5F0;padding:12px 20px;border-radius:4px;font-family:'Newsreader',Georgia,serif;font-size:15px;font-style:italic;box-shadow:0 12px 30px -14px rgba(31,47,38,0.6);">Sydney Szparaga</div>
         </div>
@@ -77,18 +77,18 @@
   </section>
 
   <section id="philosophy" style="background:#1D2B1A;color:#F7F5F0;padding:clamp(72px,10vw,140px) clamp(24px,4vw,52px);">
-    <div style="max-width:1200px;margin:0 auto;text-align:center;">
+    <div style="max-width:1340px;margin:0 auto;text-align:center;">
       <div style="display:inline-flex;align-items:center;gap:14px;margin-bottom:38px;">
         <span style="width:34px;height:1px;background:#CBB88A;"></span>
         <span style="font-size:14px;letter-spacing:0.26em;font-weight:600;color:#CBB88A;">THE&nbsp;PROBLEM</span>
         <span style="width:34px;height:1px;background:#CBB88A;"></span>
       </div>
       <h2 style="font-family:'Newsreader',Georgia,serif;font-weight:500;font-size:clamp(34px,5.4vw,68px);line-height:1.08;letter-spacing:-0.02em;margin:0 0 44px;text-wrap:balance;">If your business runs on spreadsheets, <span style="font-style:italic;color:#CBB88A;">you've already outgrown them.</span></h2>
-      <p style="font-size:clamp(18px,1.7vw,24px);line-height:1.75;color:#D8DAD3;max-width:72ch;margin:0 auto;">Growth doesn’t break businesses—outgrown systems do. Most growing companies hit the same wall: too many tabs, too much tribal knowledge, too many dropped balls, and the critical know-how living in one person’s head. The cost shows up right when you can least afford it — mid-scale, mid-raise, mid-hire.</p>
+      <p style="font-size:clamp(18px,1.7vw,24px);line-height:1.75;color:#D8DAD3;max-width:88ch;margin:0 auto;">Growth doesn’t break businesses—outgrown systems do. Most growing companies hit the same wall: too many tabs, too much tribal knowledge, too many dropped balls, and the critical know-how living in one person’s head. The cost shows up right when you can least afford it — mid-scale, mid-raise, mid-hire.</p>
     </div>
   </section>
 
-  <section id="solution" style="padding:clamp(72px,10vw,130px) clamp(24px,4vw,52px);max-width:1280px;margin:0 auto;">
+  <section id="solution" style="padding:clamp(72px,10vw,130px) clamp(24px,4vw,52px);max-width:1400px;margin:0 auto;">
     <div style="text-align:center;margin-bottom:clamp(48px,6vw,72px);">
       <div style="display:inline-flex;align-items:center;gap:14px;margin-bottom:26px;">
         <span style="width:34px;height:1px;background:#CBB88A;"></span>
@@ -96,32 +96,32 @@
         <span style="width:34px;height:1px;background:#CBB88A;"></span>
       </div>
       <h2 style="font-family:'Newsreader',Georgia,serif;font-weight:500;font-size:clamp(32px,4.8vw,60px);line-height:1.05;letter-spacing:-0.02em;color:#1D2B1A;margin:0 0 30px;text-wrap:balance;">Build the right infrastructure — <span style="font-style:italic;">before the mess gets expensive.</span></h2>
-      <p style="font-size:clamp(18px,1.6vw,23px);line-height:1.7;color:#45443d;max-width:74ch;margin:0 auto;">The answer isn’t working harder. I design and implement the systems, workflows, and connected tools that replace manual chaos with visibility, accountability, and room to scale. Less time chasing information. Fewer missed deadlines. No crossed wires between teams. Just a business that runs the way it should.</p>
+      <p style="font-size:clamp(18px,1.6vw,23px);line-height:1.7;color:#45443d;max-width:90ch;margin:0 auto;">The answer isn’t working harder. I design and implement the systems, workflows, and connected tools that replace manual chaos with visibility, accountability, and room to scale. Less time chasing information. Fewer missed deadlines. No crossed wires between teams. Just a business that runs the way it should.</p>
     </div>
     <div style="border-top:1px solid #E4E0D8;padding-top:clamp(38px,4vw,54px);">
       <div style="text-align:center;margin-bottom:clamp(30px,3.5vw,42px);">
         <div style="font-family:'Newsreader',Georgia,serif;font-style:italic;font-size:clamp(24px,2.6vw,34px);color:#1D2B1A;">One partner. Every operational layer.</div>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:clamp(12px,1.6vw,20px);">
-        <div style="display:flex;flex-direction:column;gap:8px;padding:28px 22px;background:#EFEBE2;border-radius:10px;">
-          <div style="font-family:'Newsreader',Georgia,serif;font-size:20px;line-height:1.15;color:#1D2B1A;">Fractional Operations</div>
-          <div style="font-size:15px;line-height:1.5;color:#6a695f;">Senior ops leadership, part-time.</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:clamp(12px,1.6vw,20px);">
+        <div style="display:flex;flex-direction:column;gap:8px;padding:clamp(28px,2.6vw,38px) clamp(24px,2.2vw,30px);background:#EFEBE2;border-radius:10px;">
+          <div style="font-family:'Newsreader',Georgia,serif;font-size:clamp(21px,2vw,26px);line-height:1.15;color:#1D2B1A;">Fractional Operations</div>
+          <div style="font-size:clamp(16px,1.3vw,18px);line-height:1.5;color:#6a695f;">Senior ops leadership, part-time.</div>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:28px 22px;background:#EFEBE2;border-radius:10px;">
-          <div style="font-family:'Newsreader',Georgia,serif;font-size:20px;line-height:1.15;color:#1D2B1A;">Software Implementation</div>
-          <div style="font-size:15px;line-height:1.5;color:#6a695f;">Platforms rolled out and adopted.</div>
+        <div style="display:flex;flex-direction:column;gap:8px;padding:clamp(28px,2.6vw,38px) clamp(24px,2.2vw,30px);background:#EFEBE2;border-radius:10px;">
+          <div style="font-family:'Newsreader',Georgia,serif;font-size:clamp(21px,2vw,26px);line-height:1.15;color:#1D2B1A;">Software Implementation</div>
+          <div style="font-size:clamp(16px,1.3vw,18px);line-height:1.5;color:#6a695f;">Platforms rolled out and adopted.</div>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:28px 22px;background:#EFEBE2;border-radius:10px;">
-          <div style="font-family:'Newsreader',Georgia,serif;font-size:20px;line-height:1.15;color:#1D2B1A;">AI Enablement</div>
-          <div style="font-size:15px;line-height:1.5;color:#6a695f;">Workflows that remove friction.</div>
+        <div style="display:flex;flex-direction:column;gap:8px;padding:clamp(28px,2.6vw,38px) clamp(24px,2.2vw,30px);background:#EFEBE2;border-radius:10px;">
+          <div style="font-family:'Newsreader',Georgia,serif;font-size:clamp(21px,2vw,26px);line-height:1.15;color:#1D2B1A;">AI Enablement</div>
+          <div style="font-size:clamp(16px,1.3vw,18px);line-height:1.5;color:#6a695f;">Workflows that remove friction.</div>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:28px 22px;background:#EFEBE2;border-radius:10px;">
-          <div style="font-family:'Newsreader',Georgia,serif;font-size:20px;line-height:1.15;color:#1D2B1A;">Compliance & Regulatory Ops</div>
-          <div style="font-size:15px;line-height:1.5;color:#6a695f;">DDQ, KYC, filings, and entities.</div>
+        <div style="display:flex;flex-direction:column;gap:8px;padding:clamp(28px,2.6vw,38px) clamp(24px,2.2vw,30px);background:#EFEBE2;border-radius:10px;">
+          <div style="font-family:'Newsreader',Georgia,serif;font-size:clamp(21px,2vw,26px);line-height:1.15;color:#1D2B1A;">Compliance & Regulatory Ops</div>
+          <div style="font-size:clamp(16px,1.3vw,18px);line-height:1.5;color:#6a695f;">DDQ, KYC, filings, and entities.</div>
         </div>
-        <div style="display:flex;flex-direction:column;gap:8px;padding:28px 22px;background:#EFEBE2;border-radius:10px;">
-          <div style="font-family:'Newsreader',Georgia,serif;font-size:20px;line-height:1.15;color:#1D2B1A;">Systems & Playbooks</div>
-          <div style="font-size:15px;line-height:1.5;color:#6a695f;">So nothing lives in one head.</div>
+        <div style="display:flex;flex-direction:column;gap:8px;padding:clamp(28px,2.6vw,38px) clamp(24px,2.2vw,30px);background:#EFEBE2;border-radius:10px;">
+          <div style="font-family:'Newsreader',Georgia,serif;font-size:clamp(21px,2vw,26px);line-height:1.15;color:#1D2B1A;">Systems & Playbooks</div>
+          <div style="font-size:clamp(16px,1.3vw,18px);line-height:1.5;color:#6a695f;">So nothing lives in one head.</div>
         </div>
       </div>
       <div style="text-align:center;margin-top:clamp(38px,4vw,52px);">
@@ -142,11 +142,11 @@
         <sc-for list="{{ stats }}" as="stat" hint-placeholder-count="4">
           <div style="text-align:center;">
             <div style="font-family:'Newsreader',Georgia,serif;font-weight:500;font-size:clamp(44px,5.5vw,76px);line-height:1;color:#CBB88A;margin-bottom:16px;">{{ stat.value }}</div>
-            <p style="font-size:16px;line-height:1.5;color:#C6C9C1;margin:0 auto;max-width:22ch;">{{ stat.label }}</p>
+            <p style="font-size:clamp(17px,1.5vw,20px);line-height:1.55;color:#C6C9C1;margin:0 auto;max-width:24ch;">{{ stat.label }}</p>
           </div>
         </sc-for>
       </div>
-      <p style="text-align:center;font-size:clamp(18px,1.6vw,23px);line-height:1.7;color:#D8DAD3;max-width:70ch;margin:clamp(44px,5vw,64px) auto 0;">Nearly a decade across law firms, startups, and high-growth tech and fintech companies — from Series-stage through IPO readiness.</p>
+      <p style="text-align:center;font-size:clamp(19px,1.7vw,25px);line-height:1.7;color:#D8DAD3;max-width:88ch;margin:clamp(44px,5vw,64px) auto 0;">Nearly a decade across law firms, startups, and high-growth tech and fintech companies — from Series-stage through IPO readiness.</p>
       <div style="text-align:center;margin-top:32px;">
         <a href="cv.html" style="display:inline-flex;align-items:center;gap:8px;font-size:16px;font-weight:500;color:#F7F5F0;border-bottom:1px solid #CBB88A;padding-bottom:4px;" style-hover="color:#CBB88A;">View full résumé →</a>
       </div>
@@ -161,7 +161,7 @@
       <span style="width:34px;height:1px;background:#CBB88A;"></span>
     </div>
     <h2 style="font-family:'Newsreader',Georgia,serif;font-weight:500;font-size:clamp(32px,4.6vw,58px);line-height:1.06;letter-spacing:-0.02em;color:#1D2B1A;margin:0 0 clamp(36px,5vw,52px);text-wrap:balance;">This work is for —</h2>
-    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:14px;max-width:920px;margin:0 auto;">
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:14px;max-width:1040px;margin:0 auto;">
       <sc-for list="{{ audiences }}" as="aud" hint-placeholder-count="7">
         <span style="display:inline-flex;align-items:center;padding:13px 26px;border:1px solid #1D2B1A;border-radius:999px;font-size:clamp(15px,1.2vw,18px);color:#1D2B1A;background:transparent;" style-hover="background:#1D2B1A;color:#F7F5F0;">{{ aud }}</span>
       </sc-for>
@@ -178,7 +178,7 @@
           <span style="width:34px;height:1px;background:#CBB88A;"></span>
         </div>
         <h2 style="font-family:'Newsreader',Georgia,serif;font-weight:500;font-size:clamp(32px,4.6vw,58px);line-height:1.06;letter-spacing:-0.02em;margin:0 0 20px;text-wrap:balance;">Tools I've actually run.</h2>
-        <p style="font-size:17px;line-height:1.65;color:#C6C9C1;max-width:64ch;margin:0 auto;">Implemented, administered, and gotten teams to genuinely adopt — not just licensed.</p>
+        <p style="font-size:17px;line-height:1.65;color:#C6C9C1;max-width:80ch;margin:0 auto;">Implemented, administered, and gotten teams to genuinely adopt — not just licensed.</p>
       </div>
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,28px);">
         <sc-for list="{{ stack }}" as="cat" hint-placeholder-count="6">
@@ -199,7 +199,7 @@
   </section>
 
   <sc-if value="{{ showFaq }}" hint-placeholder-val="{{ true }}">
-  <section style="padding:clamp(64px,9vw,120px) clamp(24px,4vw,52px);max-width:1200px;margin:0 auto;text-align:center;">
+  <section style="padding:clamp(64px,9vw,120px) clamp(24px,4vw,52px);max-width:1340px;margin:0 auto;text-align:center;">
     <div style="display:inline-flex;align-items:center;gap:14px;margin-bottom:26px;">
       <span style="width:34px;height:1px;background:#CBB88A;"></span>
       <span style="font-size:14px;letter-spacing:0.26em;font-weight:600;color:#1D2B1A;">BEFORE&nbsp;YOU&nbsp;REACH&nbsp;OUT</span>
@@ -211,14 +211,14 @@
   </sc-if>
 
   <section id="contact" style="background:#1D2B1A;color:#F7F5F0;padding:clamp(80px,11vw,150px) clamp(24px,4vw,52px);">
-    <div style="max-width:1060px;margin:0 auto;text-align:center;">
+    <div style="max-width:1200px;margin:0 auto;text-align:center;">
       <div style="display:inline-flex;align-items:center;gap:14px;margin-bottom:34px;">
         <span style="width:34px;height:1px;background:#CBB88A;"></span>
         <span style="font-size:14px;letter-spacing:0.26em;font-weight:600;color:#CBB88A;">LET'S&nbsp;TALK</span>
         <span style="width:34px;height:1px;background:#CBB88A;"></span>
       </div>
       <h2 style="font-family:'Newsreader',Georgia,serif;font-weight:500;font-size:clamp(38px,6vw,80px);line-height:1.02;letter-spacing:-0.02em;margin:0 0 30px;text-wrap:balance;">Ready to build something that <span style="font-style:italic;color:#CBB88A;">actually works?</span></h2>
-      <p style="font-size:clamp(18px,1.6vw,23px);line-height:1.6;color:#D8DAD3;max-width:54ch;margin:0 auto 44px;">Tell me what you're working on. We'll figure out what to prioritize from there — you don't need a perfectly scoped brief.</p>
+      <p style="font-size:clamp(18px,1.6vw,23px);line-height:1.6;color:#D8DAD3;max-width:64ch;margin:0 auto 44px;">Tell me what you're working on. We'll figure out what to prioritize from there — you don't need a perfectly scoped brief.</p>
       <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:14px;">
         <a href="mailto:smszparaga@gmail.com" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;padding:16px 32px;background:#F7F5F0;color:#1D2B1A;border-radius:999px;font-size:16px;font-weight:500;" style-hover="background:#CBB88A;">Email me</a>
         <a href="https://calendly.com/smszparaga" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;padding:16px 32px;background:transparent;color:#F7F5F0;border:1px solid rgba(247,245,240,0.5);border-radius:999px;font-size:16px;font-weight:500;" style-hover="border-color:#CBB88A;color:#CBB88A;">Book a meeting</a>
