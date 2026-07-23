@@ -22,6 +22,10 @@
   ::selection { background: #CBB88A; color: #1D2B1A; }
   .sc-menu{opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .18s ease,transform .18s ease,visibility .18s;pointer-events:none;}
   .sc-drop:hover .sc-menu, .sc-drop:focus-within .sc-menu{opacity:1;visibility:visible;transform:none;pointer-events:auto;}
+  @media (min-width:769px) and (max-width:900px){
+    .stats-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;}
+    .stack-grid{grid-template-columns:repeat(2,1fr) !important;}
+  }
   @media (max-width:768px){
     .masthead{display:flex !important;flex-direction:column !important;align-items:center !important;padding:40px 20px 30px !important;}
     .mast-logo{order:1;}
@@ -30,12 +34,9 @@
     .mast-word{font-size:26px !important;letter-spacing:0.2em !important;padding-left:0.2em !important;}
     .mast-tag{font-size:11px !important;letter-spacing:0.24em !important;padding-left:0.22em !important;}
     .hero-grid{grid-template-columns:1fr !important;}
+    .stats-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;}
     .stat-num{font-size:38px !important;word-break:break-word;}
     .stack-grid{grid-template-columns:1fr !important;}
-  }
-  @media (max-width:900px){
-    .stats-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;}
-    .stack-grid{grid-template-columns:repeat(2,1fr) !important;}
   }
 </style>
 </helmet>
