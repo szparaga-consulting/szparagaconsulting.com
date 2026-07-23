@@ -22,18 +22,32 @@
   ::selection { background: #CBB88A; color: #1D2B1A; }
   .sc-menu{opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .18s ease,transform .18s ease,visibility .18s;pointer-events:none;}
   .sc-drop:hover .sc-menu, .sc-drop:focus-within .sc-menu{opacity:1;visibility:visible;transform:none;pointer-events:auto;}
+  @media (max-width:768px){
+    .masthead{display:flex !important;flex-direction:column !important;align-items:center !important;padding:40px 20px 30px !important;}
+    .mast-logo{order:1;}
+    .mast-home{position:static !important;top:auto !important;left:auto !important;order:2;margin-top:26px !important;border-bottom:0 !important;padding-bottom:0 !important;}
+    .mast-nav{position:static !important;top:auto !important;right:auto !important;order:3;flex-wrap:wrap !important;justify-content:center !important;margin-top:14px !important;gap:18px 22px !important;}
+    .mast-word{font-size:26px !important;letter-spacing:0.2em !important;padding-left:0.2em !important;}
+    .mast-tag{font-size:11px !important;letter-spacing:0.24em !important;padding-left:0.22em !important;}
+    .hero-grid{grid-template-columns:1fr !important;}
+    .stack-grid{grid-template-columns:1fr !important;}
+  }
+  @media (max-width:900px){
+    .stats-grid{grid-template-columns:repeat(2,1fr);}
+    .stack-grid{grid-template-columns:repeat(2,1fr);}
+  }
 </style>
 </helmet>
 <div style="background:#F7F5F0;color:#171512;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;">
 
-  <div style="background:#1D2B1A;color:#F7F5F0;padding:clamp(48px,5.2vw,64px) clamp(24px,4vw,52px) clamp(26px,3vw,38px);text-align:center;position:relative;">
-    <a href="/" style="position:absolute;top:clamp(18px,2.2vw,26px);left:clamp(24px,4vw,52px);font-size:15px;letter-spacing:0.14em;color:#F7F5F0;border-bottom:1px solid #CBB88A;padding-bottom:5px;transition:color .25s ease;">Home</a>
-    <a href="#top" style="display:inline-flex;flex-direction:column;align-items:center;gap:clamp(15px,1.7vw,21px);">
+  <div class="masthead" style="background:#1D2B1A;color:#F7F5F0;padding:clamp(48px,5.2vw,64px) clamp(24px,4vw,52px) clamp(26px,3vw,38px);text-align:center;position:relative;">
+    <a href="/" class="mast-home" style="position:absolute;top:clamp(18px,2.2vw,26px);left:clamp(24px,4vw,52px);font-size:15px;letter-spacing:0.14em;color:#F7F5F0;border-bottom:1px solid #CBB88A;padding-bottom:5px;transition:color .25s ease;">Home</a>
+    <a href="#top" class="mast-logo" style="display:inline-flex;flex-direction:column;align-items:center;gap:clamp(15px,1.7vw,21px);">
       <img src="ss-emboss.png" alt="Szparaga Consulting monogram" style="height:clamp(80px,8vw,116px);width:auto;display:block;" />
-      <span style="font-family:'Newsreader',Georgia,serif;font-size:clamp(28px,3.7vw,44px);letter-spacing:0.36em;font-weight:400;padding-left:0.34em;line-height:1;">SZPARAGA CONSULTING</span>
-      <span style="font-size:clamp(12px,1.15vw,16px);letter-spacing:0.4em;color:#B9C0B4;padding-left:0.38em;">OPERATIONAL INFRASTRUCTURE FOR HIGH-GROWTH COMPANIES</span>
+      <span class="mast-word" style="font-family:'Newsreader',Georgia,serif;font-size:clamp(28px,3.7vw,44px);letter-spacing:0.36em;font-weight:400;padding-left:0.34em;line-height:1;">SZPARAGA CONSULTING</span>
+      <span class="mast-tag" style="font-size:clamp(12px,1.15vw,16px);letter-spacing:0.4em;color:#B9C0B4;padding-left:0.38em;">OPERATIONAL INFRASTRUCTURE FOR HIGH-GROWTH COMPANIES</span>
     </a>
-    <nav style="position:absolute;top:clamp(18px,2.2vw,26px);right:clamp(24px,4vw,52px);display:flex;align-items:center;gap:clamp(24px,2.8vw,42px);">
+    <nav class="mast-nav" style="position:absolute;top:clamp(18px,2.2vw,26px);right:clamp(24px,4vw,52px);display:flex;align-items:center;gap:clamp(24px,2.8vw,42px);">
       <a href="services.html" style="font-size:15px;letter-spacing:0.14em;color:#B9BEB6;transition:color .25s ease;" style-hover="color:#F7F5F0;">Services</a>
       <a href="cv.html" style="font-size:15px;letter-spacing:0.14em;color:#B9BEB6;transition:color .25s ease;" style-hover="color:#F7F5F0;">Experience</a>
       <a href="working-together.html" style="font-size:15px;letter-spacing:0.14em;color:#B9BEB6;transition:color .25s ease;" style-hover="color:#F7F5F0;">Working Together</a>
@@ -49,7 +63,7 @@
   </div>
 
   <section id="top" style="padding:clamp(56px,8vw,104px) clamp(24px,4vw,52px) clamp(40px,6vw,72px);max-width:1440px;margin:0 auto;">
-    <div style="display:grid;grid-template-columns:1.35fr 0.86fr;gap:clamp(36px,5vw,80px);align-items:center;">
+    <div class="hero-grid" style="display:grid;grid-template-columns:1.35fr 0.86fr;gap:clamp(36px,5vw,80px);align-items:center;">
       <div>
         <div style="display:flex;align-items:center;gap:14px;margin-bottom:28px;">
           <span style="width:34px;height:1px;background:#CBB88A;"></span>
@@ -142,7 +156,7 @@
         <span style="font-size:14px;letter-spacing:0.26em;font-weight:600;color:#CBB88A;">THE&nbsp;TRACK&nbsp;RECORD</span>
         <span style="width:34px;height:1px;background:#CBB88A;"></span>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(24px,3vw,48px);">
+      <div class="stats-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(24px,3vw,48px);">
         <sc-for list="{{ stats }}" as="stat" hint-placeholder-count="4">
           <div style="text-align:center;">
             <div style="font-family:'Newsreader',Georgia,serif;font-weight:500;font-size:clamp(44px,5.5vw,76px);line-height:1;color:#CBB88A;margin-bottom:16px;">{{ stat.value }}</div>
@@ -184,7 +198,7 @@
         <h2 style="font-family:'Newsreader',Georgia,serif;font-weight:500;font-size:clamp(31px,4.2vw,54px);line-height:1.06;letter-spacing:-0.02em;margin:0 0 20px;text-wrap:balance;">Tools I've actually run.</h2>
         <p style="font-size:clamp(17px,1.4vw,20px);line-height:1.65;color:#C6C9C1;max-width:60ch;margin:0 auto;text-align:center;">Implemented, administered, and gotten teams to genuinely adopt — not just licensed.</p>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,28px);">
+      <div class="stack-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,28px);">
         <sc-for list="{{ stack }}" as="cat" hint-placeholder-count="6">
           <div style="background:#F7F5F0;color:#171512;border-radius:8px;padding:clamp(24px,2.5vw,34px);display:flex;flex-direction:column;gap:18px;">
             <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;border-bottom:1px solid #E4E0D8;padding-bottom:16px;">

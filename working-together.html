@@ -22,18 +22,30 @@
   ::selection { background: #CBB88A; color: #1D2B1A; }
   .sc-menu{opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .18s ease,transform .18s ease,visibility .18s;pointer-events:none;}
   .sc-drop:hover .sc-menu, .sc-drop:focus-within .sc-menu{opacity:1;visibility:visible;transform:none;pointer-events:auto;}
+  @media (max-width:768px){
+    .masthead{display:flex !important;flex-direction:column !important;align-items:center !important;padding:40px 20px 30px !important;}
+    .mast-logo{order:1;}
+    .mast-home{position:static !important;top:auto !important;left:auto !important;order:2;margin-top:26px !important;border-bottom:0 !important;padding-bottom:0 !important;}
+    .mast-nav{position:static !important;top:auto !important;right:auto !important;order:3;flex-wrap:wrap !important;justify-content:center !important;margin-top:14px !important;gap:18px 22px !important;}
+    .mast-word{font-size:26px !important;letter-spacing:0.2em !important;padding-left:0.2em !important;}
+    .mast-tag{font-size:11px !important;letter-spacing:0.24em !important;padding-left:0.22em !important;}
+    .wt-three{grid-template-columns:1fr !important;}
+  }
+  @media (max-width:900px){
+    .wt-three{grid-template-columns:repeat(2,1fr);}
+  }
 </style>
 </helmet>
 <div style="background:#F7F5F0;color:#171512;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;">
 
-  <div style="background:#1D2B1A;color:#F7F5F0;padding:clamp(48px,5.2vw,64px) clamp(24px,4vw,52px) clamp(26px,3vw,38px);text-align:center;position:relative;">
-    <a href="/" style="position:absolute;top:clamp(18px,2.2vw,26px);left:clamp(24px,4vw,52px);font-size:15px;letter-spacing:0.14em;color:#B9BEB6;transition:color .25s ease;" style-hover="color:#F7F5F0;">Home</a>
-    <a href="/" style="display:inline-flex;flex-direction:column;align-items:center;gap:clamp(15px,1.7vw,21px);">
+  <div class="masthead" style="background:#1D2B1A;color:#F7F5F0;padding:clamp(48px,5.2vw,64px) clamp(24px,4vw,52px) clamp(26px,3vw,38px);text-align:center;position:relative;">
+    <a href="/" class="mast-home" style="position:absolute;top:clamp(18px,2.2vw,26px);left:clamp(24px,4vw,52px);font-size:15px;letter-spacing:0.14em;color:#B9BEB6;transition:color .25s ease;" style-hover="color:#F7F5F0;">Home</a>
+    <a href="/" class="mast-logo" style="display:inline-flex;flex-direction:column;align-items:center;gap:clamp(15px,1.7vw,21px);">
       <img src="ss-emboss.png" alt="Szparaga Consulting monogram" style="height:clamp(80px,8vw,116px);width:auto;display:block;" />
-      <span style="font-family:'Newsreader',Georgia,serif;font-size:clamp(28px,3.7vw,44px);letter-spacing:0.36em;font-weight:400;padding-left:0.34em;line-height:1;">SZPARAGA CONSULTING</span>
-      <span style="font-size:clamp(12px,1.15vw,16px);letter-spacing:0.4em;color:#B9C0B4;padding-left:0.38em;">OPERATIONAL INFRASTRUCTURE FOR HIGH-GROWTH COMPANIES</span>
+      <span class="mast-word" style="font-family:'Newsreader',Georgia,serif;font-size:clamp(28px,3.7vw,44px);letter-spacing:0.36em;font-weight:400;padding-left:0.34em;line-height:1;">SZPARAGA CONSULTING</span>
+      <span class="mast-tag" style="font-size:clamp(12px,1.15vw,16px);letter-spacing:0.4em;color:#B9C0B4;padding-left:0.38em;">OPERATIONAL INFRASTRUCTURE FOR HIGH-GROWTH COMPANIES</span>
     </a>
-    <nav style="position:absolute;top:clamp(18px,2.2vw,26px);right:clamp(24px,4vw,52px);display:flex;align-items:center;gap:clamp(24px,2.8vw,42px);">
+    <nav class="mast-nav" style="position:absolute;top:clamp(18px,2.2vw,26px);right:clamp(24px,4vw,52px);display:flex;align-items:center;gap:clamp(24px,2.8vw,42px);">
       <a href="services.html" style="font-size:15px;letter-spacing:0.14em;color:#B9BEB6;transition:color .25s ease;" style-hover="color:#F7F5F0;">Services</a>
       <a href="cv.html" style="font-size:15px;letter-spacing:0.14em;color:#B9BEB6;transition:color .25s ease;" style-hover="color:#F7F5F0;">Experience</a>
       <a href="working-together.html" style="font-size:15px;letter-spacing:0.14em;color:#F7F5F0;border-bottom:1px solid #CBB88A;padding-bottom:5px;transition:color .25s ease;">Working Together</a>
@@ -102,7 +114,7 @@
         </div>
         <h2 style="font-family:'Newsreader',Georgia,serif;font-weight:500;font-size:clamp(32px,4.6vw,58px);line-height:1.06;letter-spacing:-0.02em;margin:0;text-wrap:balance;">Three ways we can work together.</h2>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,28px);">
+      <div class="wt-three" style="display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,28px);">
         <sc-for list="{{ engagements }}" as="eng" hint-placeholder-count="3">
           <div style="background:#F7F5F0;color:#171512;border-radius:8px;padding:clamp(28px,2.6vw,40px);display:flex;flex-direction:column;gap:20px;">
             <div>
@@ -160,7 +172,7 @@
         </div>
         <p style="font-size:clamp(18px,1.7vw,24px);line-height:1.7;color:#D8DAD3;max-width:84ch;margin:0 auto;">Every engagement is different, so pricing is based on scope and timeline. No surprises — scope, deliverables, and cost are agreed on before anything starts.</p>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2vw,24px);">
+      <div class="wt-three" style="display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2vw,24px);">
         <sc-for list="{{ pricing }}" as="p" hint-placeholder-count="3">
           <div style="border:1px solid rgba(247,245,240,0.28);border-radius:8px;padding:clamp(24px,2.4vw,34px);text-align:center;">
             <h3 style="font-family:'Newsreader',Georgia,serif;font-weight:500;font-size:clamp(20px,2vw,26px);color:#F7F5F0;margin:0 0 10px;">{{ p.name }}</h3>
